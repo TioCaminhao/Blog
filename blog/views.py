@@ -8,7 +8,9 @@ def pagina(request):
     return render(request, 'index.html')
 
 def foto(request):
-    return render(request, 'foto.html')
+    foto = foto1.objects.all()
+    context = {'foto': foto}
+    return render(request, 'foto.html', context)
 
 def sobremim(request, *args, **kwargs):
     sobremim = sobremim1.objects.all() 

@@ -14,9 +14,11 @@
         <!-- Portfolio Grid Items-->
         <div class="row justify-content-center">
             <!-- Portfolio Item 1-->
-            <div class="col-md-6 col-lg-4 mb-5">          
-                    <img class="img-fluid" src="assets/img/portfolio/cabin.png" alt="..." />   
-            </div>
+            {% for foto1 in foto %}
+                <div class="col-md-6 col-lg-4 mb-5">          
+                    <img class="img-fluid" src="{{ foto1.foto.url }}" alt="{{ foto1.titulo }}" />   
+                </div>
+            {% endfor %}
         </div>
     </div>
 </section>
