@@ -1,14 +1,12 @@
 from django.db import models
 
-class sobremim(models.Model):
-    cursos = models.TextField()
-    interesses = models.TextField()
-    gostos = models.TextField()
-    qualidade = models.TextField()
+class sobremim1(models.Model):
+    texto1 = models.TextField()
+    texto2 = models.TextField()
 
-class dados(models.Model):
+class dados1(models.Model):
     nome = models.CharField(max_length=200)
-    idade = models.IntegerField()
-    dn = models.DateField()
-    altura = models.IntegerField()
-    peso = models.IntegerField() 
+    email = models.EmailField()
+    cell = models.IntegerField()
+    bio = models.TextField() 
+

@@ -1,0 +1,25 @@
+{% extends 'index.html' %}
+
+{% block conteudo %}
+
+<section class="page-section bg-primary text-white mb-0" id="about">
+    <div class="container">
+        <!-- About Section Heading-->
+        <h2 class="page-section-heading text-center text-uppercase text-white">Sobre mim</h2>
+        <!-- Icon Divider-->
+        <div class="divider-custom divider-light">
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+            <div class="divider-custom-line"></div>
+        </div>
+        <!-- Colocar os dados do model-->
+        <div class="row">
+        {% for sobremim1 in sobremim %}
+                <div class="col-lg-4 ms-auto"><p class="lead">{{ sobremim1.texto1 }}</p></div>
+                <div class="col-lg-4 me-auto"><p class="lead">{{ sobremim1.texto2 }}</p></div>
+        {% endfor %}
+        </div>
+    </div>
+</section>
+
+{% endblock %}
